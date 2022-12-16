@@ -177,9 +177,9 @@ resource "aws_autoscaling_group" "web_asg" {
     value               = "Web Application Auto Scaling Group"
     propagate_at_launch = true
   }
-  provisioner "local-exec" {
-    command = "./get_ips.sh"
-  }
+  # provisioner "local-exec" {
+  #   command = "./get_ips.sh"
+  # }
   # lifecycle {
   #   create_before_destroy = true
   # }
