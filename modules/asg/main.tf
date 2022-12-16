@@ -162,7 +162,7 @@ resource "aws_autoscaling_group" "web_asg" {
   min_size                  = var.min_size
   health_check_grace_period = 300
   health_check_type         = "ELB"
-  desired_capacity          = 3
+  desired_capacity          = var.desired_capacity 
   force_delete              = true
   launch_template {
     id      = aws_launch_template.web_lt.id

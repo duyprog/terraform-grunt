@@ -36,3 +36,8 @@ variable "key_name" {
   type = string 
   description = "SSH keypem used for access EC2"
 }
+
+variable "desired_capacity"{ 
+  type = number 
+  description = "Number of desired instance we want in autoscaling group"
+}
